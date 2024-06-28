@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Badge, ActionIcon } from 'rizzui';
 import cn from '@utils/class-names';
+import SearchWidget from '@/app/shared/search/search';
 import MessagesDropdown from '@/layouts/messages-dropdown';
 import NotificationDropdown from '@/layouts/notification-dropdown';
 import ProfileMenu from '@/layouts/profile-menu';
@@ -18,7 +19,6 @@ import {
 import HeaderMenuLeft from '@/layouts/lithium/lithium-menu';
 import Sidebar from '@/layouts/hydrogen/sidebar';
 import StickyHeader from '@/layouts/sticky-header';
-import SearchWidget from '@/app/shared/search/search';
 
 function HeaderMenuRight() {
   return (

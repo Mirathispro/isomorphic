@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Badge, ActionIcon } from 'rizzui';
 import cn from '@utils/class-names';
+import SearchWidget from '@/app/shared/search/search';
 import MessagesDropdown from '@/layouts/messages-dropdown';
 import NotificationDropdown from '@/layouts/notification-dropdown';
 import ProfileMenu from '@/layouts/profile-menu';
@@ -15,7 +16,6 @@ import {
   PiGearFill,
 } from 'react-icons/pi';
 import Sidebar from './helium-sidebar';
-import SearchWidget from '@/app/shared/search/search';
 
 function HeaderMenuRight() {
   return (

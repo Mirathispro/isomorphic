@@ -4,9 +4,9 @@ import { Button } from 'rizzui';
 import SimpleBar from '@ui/simplebar';
 import EnvatoIcon from '@components/icons/envato';
 import LayoutSwitcher from '@/layouts/layout-switcher';
-import ThemeSwitcher from './settings/theme-switcher';
-import AppDirection from './settings/app-direction';
-import ColorOptions from './settings/color-options';
+import ColorOptions from '@/layouts/settings/color-options';
+import AppDirection from '@/layouts/settings/app-direction';
+import ThemeSwitcher from '@/layouts/settings/theme-switcher';
 
 export default function SettingsDrawer() {
   return (

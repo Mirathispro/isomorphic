@@ -1,16 +1,16 @@
 'use client';
 
 import { RadioGroup } from 'rizzui';
+import { useLayout } from '@/layouts/use-layout';
 import { LAYOUT_OPTIONS } from '@/config/enums';
+import RadioBox from '@/layouts/settings/radio-box';
+import DrawerBlock from '@/layouts/settings/drawer-block';
 import HydrogenIcon from './hydrogen-icon';
 import HeliumIcon from './helium-icon';
 import LithiumIcon from './lithium-icon';
 import BerylliumIcon from './beryllium-icon';
 import BoronIcon from './boron-icon';
 import CarbonIcon from './carbon-icon';
-import { useLayout } from './use-layout';
-import DrawerBlock from './settings/drawer-block';
-import RadioBox from './settings/radio-box';
 
 const layoutOptions = [
   {

@@ -9,12 +9,11 @@ import { ActionIcon } from "rizzui";
 import cn from "@utils/class-names";
 import DrawerHeader from "@/layouts/drawer-header";
 import { usePresets } from "@/config/color-presets";
-// import {
-//   useApplyColorPreset,
-//   useColorPresets,
-// } from "@hooks/use-theme-color";
+import {
+  useApplyColorPreset,
+  useColorPresets,
+} from "@/layouts/settings/use-theme-color";
 import { useDrawer } from "@/app/shared/drawer-views/use-drawer";
-import { useApplyColorPreset, useColorPresets } from "./settings/use-theme-color";
 const SettingsDrawer = dynamic(() => import("@/layouts/settings-drawer"), {
   ssr: false,
 });
@@ -22,11 +21,9 @@ const SettingsDrawer = dynamic(() => import("@/layouts/settings-drawer"), {
 export default function SettingsButton({
   className,
   children,
-  t,
 }: {
   className?: string;
   children?: React.ReactNode;
-  t?: (key: string) => string | undefined;
 }) {
   const COLOR_PRESETS = usePresets();
   const { openDrawer, closeDrawer } = useDrawer();
@@ -34,15 +31,6 @@ export default function SettingsButton({
   const { colorPresets } = useColorPresets();
   const { theme } = useTheme();
 
-  // const applyColorPreset = colorPresets
-  //   ? colorPresets && theme === 'dark'
-  //     ? COLOR_PRESETS[1].colors
-  //     : colorPresets
-  //   : COLOR_PRESETS[0].colors;
-
-  // to apply color preset value in css variable
-
-  // useApplyColorPreset<any>(applyColorPreset);
   useApplyColorPreset<any>(colorPresets ?? COLOR_PRESETS[0].colors);
 
   // to set html dir attribute on direction change

@@ -11,3 +11,4 @@ const config: Pick<Config, "prefix" | "presets" | "content"> = {
 };
 
 export default config;
+

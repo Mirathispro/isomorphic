@@ -43,6 +43,11 @@ export const lithiumMenuItems: LithiumMenuItem = {
         icon: 'BusinessIcon',
       },
       {
+        name: 'Job Board',
+        href: routes.jobBoard.dashboard,
+        icon: 'SuitcaseIcon',
+      },
+      {
         name: 'Financial',
         href: routes.financial.dashboard,
         icon: 'FinancialStatisticsIcon',
@@ -431,14 +436,14 @@ export const lithiumMenuItems: LithiumMenuItem = {
         icon: 'SettingsWarningIcon',
       },
       {
-        name: 'Blank',
-        href: routes.blank,
-        icon: 'PageBlankIcon',
-      },
-      {
         name: 'Job Feeds',
         href: routes.jobBoard.jobFeed,
         icon: 'ScheduleIcon',
+      },
+      {
+        name: 'Blank',
+        href: routes.blank,
+        icon: 'PageBlankIcon',
       },
     ],
   },

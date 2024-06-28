@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import logoImg from '@public/logo.svg';
+import { LAYOUT_OPTIONS } from '@/config/enums';
 import logoIconImg from '@public/logo-short.svg';
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
-import { LAYOUT_OPTIONS } from './enums';
 
 enum MODE {
   DARK = 'dark',

@@ -8,8 +8,8 @@ import cn from '@utils/class-names';
 import { PiCaretDownBold, PiCommand } from 'react-icons/pi';
 import { menuItems } from '@/layouts/boron/boron-menu-items';
 import { useBoronKbdShortcuts } from '@/layouts/boron/boron-utils';
+import { useColorPresetName } from '@/layouts/settings/use-theme-color';
 import { useTheme } from 'next-themes';
-import { useColorPresetName } from '../settings/use-theme-color';
 
 export function BoronSidebarMenu() {
   const pathname = usePathname();

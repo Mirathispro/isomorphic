@@ -8,9 +8,9 @@ import { PiCaretDownBold } from 'react-icons/pi';
 import Menu from '@ui/carbon-menu/dropdown/menu';
 import StatusBadge from '@components/get-status-badge';
 import { SortableList } from '@components/dnd-sortable/dnd-sortable-list';
+import { useColorPresetName } from '@/layouts/settings/use-theme-color';
 import { DragEndEvent } from '@dnd-kit/core';
 import { arrayMove } from '@dnd-kit/sortable';
-import { useColorPresetName } from '../settings/use-theme-color';
 
 export function CarbonSidebarMenu() {
   const pathname = usePathname();

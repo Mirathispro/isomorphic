@@ -1,25 +1,31 @@
-import type { Metadata } from "next";
+import { Toaster } from 'react-hot-toast';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '@/app/api/auth/[...nextauth]/auth-options';
+import AuthProvider from '@/app/api/auth/[...nextauth]/auth-provider';
+import GlobalDrawer from '@/app/shared/drawer-views/container';
+import GlobalModal from '@/app/shared/modal-views/container';
+import { ThemeProvider } from '@/app/shared/theme-provider';
+import { siteConfig } from '@/config/site.config';
 import { inter, lexendDeca } from '@/app/fonts';
 import cn from '@utils/class-names';
-import { Toaster } from 'react-hot-toast';
 import NextProgress from '@components/next-progress';
-import HydrogenLayout from '@/layouts/hydrogen/layout';
-import { ThemeProvider } from "@/app/shared/theme-provider";
-import GlobalDrawer from "@/app/shared/drawer-views/container";
-import GlobalModal from "@/app/shared/modal-views/container";
 
-import "./globals.css";
+// styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import '@/app/globals.css';
 
-export const metadata: Metadata = {
-  title: "Isomorphic Starter Template",
-  description: "Isomorphic the ultimate React TypeScript Admin Template. Streamline your admin dashboard development with our feature-rich, responsive, and highly customizable solution. Boost productivity and create stunning admin interfaces effortlessly.",
+export const metadata = {
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}) {
+  const session = await getServerSession(authOptions);
   return (
     <html
       lang="en"
@@ -32,13 +38,15 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(inter.variable, lexendDeca.variable, 'font-inter')}
       >
+        <AuthProvider session={session}>
           <ThemeProvider>
             <NextProgress />
-            <HydrogenLayout>{children}</HydrogenLayout>
+            {children}
             <Toaster />
             <GlobalDrawer />
             <GlobalModal />
           </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );

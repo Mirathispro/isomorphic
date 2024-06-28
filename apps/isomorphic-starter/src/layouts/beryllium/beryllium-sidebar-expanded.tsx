@@ -14,7 +14,7 @@ import { usePathname } from 'next/navigation';
 import { PiCaretDownBold } from 'react-icons/pi';
 import SimpleBar from '@ui/simplebar';
 import StatusBadge from '@components/get-status-badge';
-import { useColorPresetName } from '../settings/use-theme-color';
+import { useColorPresetName } from '@/layouts/settings/use-theme-color';
 
 function LinkMenuItem({ item }: { item: ItemType }) {
   const { colorPresetName } = useColorPresetName();

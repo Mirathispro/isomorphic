@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import HamburgerButton from '@/layouts/hamburger-button';
+import SearchWidget from '@/app/shared/search/search';
 import Logo from '@components/logo';
 import HeaderMenuRight from '@/layouts/header-menu-right';
 import StickyHeader from '@/layouts/sticky-header';
 import { CarbonDrawerSidebar } from './carbon-drawer-sidebar';
-import SearchWidget from '@/app/shared/search/search';
 
 export default function Header() {
   return (

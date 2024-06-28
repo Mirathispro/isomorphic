@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 import HamburgerButton from '@/layouts/hamburger-button';
+import SearchWidget from '@/app/shared/search/search';
 import BoronSidebar from '@/layouts/boron/boron-sidebar';
 import Logo from '@components/logo';
 import HeaderMenuRight from '@/layouts/boron/boron-header-menu-right';
 import StickyHeader from '@/layouts/sticky-header';
 import cn from '@utils/class-names';
+import { useColorPresetName } from '@/layouts/settings/use-theme-color';
 import { useTheme } from 'next-themes';
-import { useColorPresetName } from '../settings/use-theme-color';
-import SearchWidget from '@/app/shared/search/search';
 
 export default function BoronHeader() {
   const { theme } = useTheme();

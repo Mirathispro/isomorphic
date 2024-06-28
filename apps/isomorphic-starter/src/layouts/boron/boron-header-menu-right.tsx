@@ -6,7 +6,7 @@ import NotificationDropdown from '@/layouts/notification-dropdown';
 import ProfileMenu from '@/layouts/profile-menu';
 import SettingsButton from '@/layouts/settings-button';
 import { PiGearFill, PiChatText, PiBellRinging } from 'react-icons/pi';
-import { useColorPresetName } from '../settings/use-theme-color';
+import { useColorPresetName } from '@/layouts/settings/use-theme-color';
 
 export default function HeaderMenuRight() {
   const { colorPresetName } = useColorPresetName();
@@ -18,7 +18,7 @@ export default function HeaderMenuRight() {
           aria-label="Messages"
           variant="text"
           className={cn(
-            'relative text-gray-200 dark:text-gray-700',
+            'relative text-gray-200 hover:text-gray-0 dark:text-gray-700',
             colorPresetName === 'black' &&
               'hover:text-gray-0 dark:hover:text-gray-900'
           )}
@@ -37,7 +37,7 @@ export default function HeaderMenuRight() {
           aria-label="Notification"
           variant="text"
           className={cn(
-            'relative text-gray-200 dark:text-gray-700',
+            'relative text-gray-200 hover:text-gray-0 dark:text-gray-700',
             colorPresetName === 'black' &&
               'hover:text-gray-0 dark:hover:text-gray-900'
           )}

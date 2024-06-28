@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { Drawer } from "rizzui";
-import { useDrawer } from "@/app/shared/drawer-views/use-drawer";
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { Drawer } from 'rizzui';
+import { useDrawer } from '@/app/shared/drawer-views/use-drawer';
 
 export default function GlobalDrawer() {
   const { isOpen, view, placement, customSize, closeDrawer } = useDrawer();
@@ -20,7 +20,7 @@ export default function GlobalDrawer() {
       placement={placement}
       customSize={customSize}
       overlayClassName="dark:bg-opacity-40 dark:backdrop-blur-md"
-      containerClassName={"dark:bg-gray-100"}
+      containerClassName="dark:bg-gray-100"
       className="z-[9999]"
     >
       {view}
